@@ -1,0 +1,16 @@
+#%RAML 1.0
+version: v1
+title: Sample Typescript API
+
+types:
+	Success: !include types/success.raml
+
+/v1:
+	/retail-history:
+		get:
+			responses:
+				200:
+					body:
+						application/json:
+							type: Success
+							example: !include examples/success.raml

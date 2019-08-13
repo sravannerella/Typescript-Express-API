@@ -1,8 +1,5 @@
-import express from 'express';
+import App from './app';
+const PORT = 8080 || process.env.PORT;
 
-const router = express();
-const {PORT = 8080} = process.env;
-
-router.listen(PORT, () => {
-	console.log(`Server listening on PORT: ${PORT}`);
-})
+const expressAPI = new App();
+expressAPI.startListening(PORT);

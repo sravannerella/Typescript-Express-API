@@ -1,9 +1,9 @@
 import {Router} from 'express';
 import {RetailController} from '../../controllers';
-import {checkLDAP} from '../../middleware/checkLDAP';
+import {isLDAPAuthenticated} from '../../middleware/checkLDAP';
 
 const retailRouter = Router();
 
-retailRouter.get('/', [checkLDAP], RetailController.history);
+retailRouter.get('/', [isLDAPAuthenticated], RetailController.history);
 
 export default retailRouter;

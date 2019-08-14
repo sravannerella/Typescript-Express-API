@@ -8,14 +8,14 @@ class App{
 	router: express.Application;
 
 	constructor(){
-		this.router = express();
+        this.router = express();
 		this.addMiddleware();
 		this.initRoutes();
 	}
 
 	initRoutes(){
 		this.router.use('/v1', routes);
-	}
+    }
 
 	addMiddleware(){
 		applyMiddleware(middleware, this.router);

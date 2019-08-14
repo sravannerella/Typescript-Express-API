@@ -1,5 +1,7 @@
 import App from './app';
-const PORT = 8080 || process.env.PORT;
+import dotenv from 'dotenv';
 
+dotenv.config();
+const PORT = 8080 || process.env.PORT;
 const expressAPI = new App();
 expressAPI.startListening(PORT);

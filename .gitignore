@@ -2,3 +2,7 @@ node_modules/
 dist/
 *.lock
 *-lock.json
+
+.env
+.env.prod
+.env.local

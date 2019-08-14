@@ -1,8 +1,9 @@
 import {Router} from 'express';
 import {RetailController} from '../../controllers';
+import {checkLDAP} from '../../middleware/checkLDAP';
 
-const router = Router();
+const retailRouter = Router();
 
-router.get('/', RetailController.history);
+retailRouter.get('/', [checkLDAP], RetailController.history);
 
-export default router;
+export default retailRouter;

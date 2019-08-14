@@ -7,6 +7,7 @@ This is a sample Typescript Express API.
 - ExpressJS
 - CORS
 - Helmet
+- Morgan
 - TypeORM (Yet to be added)
 
 ## Getting Started:

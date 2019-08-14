@@ -3,7 +3,7 @@ version: v1
 title: Sample Typescript API
 
 types:
-	Success: !include types/success.raml
+	Response: !include types/response.raml
 
 /v1:
 	/retail-history:
@@ -12,5 +12,10 @@ types:
 				200:
 					body:
 						application/json:
-							type: Success
+							type: Response
 							example: !include examples/success.raml
+        400:
+					body:
+							application/json:
+									type: Response
+									example: !include examples/failure.raml

@@ -5,17 +5,26 @@ title: Sample Typescript API
 types:
 	Response: !include types/response.raml
 
+traits: 
+	responses:
+		200:
+			body:
+				application/json:
+					type: Response
+					example: !include examples/success.raml
+		400:
+			body:
+				application/json:
+					type: Response
+					example: !include examples/failure.raml
+
+
 /v1:
 	/retail-history:
 		get:
+			is: responses
+				
+	/rebate-info:
+		get:
 			responses:
-				200:
-					body:
-						application/json:
-							type: Response
-							example: !include examples/success.raml
-				400:
-					body:
-						application/json:
-							type: Response
-							example: !include examples/failure.raml
+				is: responses

@@ -1,4 +1,4 @@
-import {handleCors, handleBodyParser} from './common';
+import {handleCors, handleBodyParser, handleLusca} from './common';
 import { handleLogger } from './logger';
 
-export default [handleCors, handleBodyParser, handleLogger];
+export default [handleCors, handleBodyParser, handleLusca, handleLogger];

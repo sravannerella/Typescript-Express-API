@@ -6,8 +6,9 @@ This is a sample Typescript Express API.
 - Typescript
 - ExpressJS
 - CORS
-- Helmet
+- Lusca
 - Morgan
+- Jest
 - TypeORM (Yet to be added)
 
 ## Getting Started:
@@ -19,6 +20,11 @@ To run the project:
 ```
 
 Once the API is up, you should see `Server listening on PORT: 8080`.
+
+## Running Test Cases
+```bash
+    $   npm run test # Runs the test cases
+```
 
 ## Documentation:
 
